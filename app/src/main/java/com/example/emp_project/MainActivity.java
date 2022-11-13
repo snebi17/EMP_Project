@@ -74,3 +74,5 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 }
+
+// Commented by Nejc Šneberger at 22:26 on 11/13/2022 (MM/DD/YYYY format)
