@@ -17,17 +17,23 @@ import com.example.emp_project.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
+
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // default
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+
+        //default
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
@@ -36,13 +42,8 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        TextView ferkvenca = findViewById(R.id.ferkvenca);
+        ferkvenca.setText("420");
     }
 
     @Override
@@ -74,5 +75,3 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 }
-
-// Commented by Nejc Šneberger at 22:26 on 11/13/2022 (MM/DD/YYYY format)

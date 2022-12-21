@@ -5,24 +5,19 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/FirstFragment">
 
+    <TextView
+        android:id="@+id/freq_Number"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:text="@string/freqNumberText" />
+    <TextView
+        android:id="@+id/Freq_Number"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:text="@string/freqNumberText" />
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.emp_project.FirstFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.emp_project.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_first"/>
 </navigation>
