@@ -47,27 +47,32 @@ public class MainActivity extends AppCompatActivity {
         pitchText = findViewById(R.id.freq);
         noteText = findViewById(R.id.freq_Number2);
 
-        AudioDispatcher dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050,1024,0);
+        if (checkPermissions() == PackageManager.PERMISSION_GRANTED) {
+            AudioDispatcher dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050, 1024, 0);
 
-        PitchDetectionHandler pdh = new PitchDetectionHandler() {
-            @Override
-            public void handlePitch(PitchDetectionResult res, AudioEvent e){
-                final float pitchInHz = res.getPitch();
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        processPitch(pitchInHz);
-                    }
-                });
-            }
-        };
+            PitchDetectionHandler pdh = new PitchDetectionHandler() {
+                @Override
+                public void handlePitch(PitchDetectionResult res, AudioEvent e) {
+                    final float pitchInHz = res.getPitch();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            processPitch(pitchInHz);
+                        }
+                    });
+                }
+            };
 
-        AudioProcessor pitchProcessor = new PitchProcessor(PitchProcessor.PitchEstimationAlgorithm.FFT_YIN, 22050, 1024, pdh);
-        dispatcher.addAudioProcessor(pitchProcessor);
+            AudioProcessor pitchProcessor = new PitchProcessor(PitchProcessor.PitchEstimationAlgorithm.FFT_YIN, 22050, 1024, pdh);
+            dispatcher.addAudioProcessor(pitchProcessor);
 
-        Thread audioThread = new Thread(dispatcher, "Audio Thread");
-        audioThread.start();
-
+            Thread audioThread = new Thread(dispatcher, "Audio Thread");
+            audioThread.start();
+        }
+        else {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{
+                    Manifest.permission.RECORD_AUDIO}, 1);
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -108,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
         else {
             noteText.setText("to low");
         }
+    }
+
+    private int checkPermissions() {
+        return ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.RECORD_AUDIO);
     }
 
     @Override
