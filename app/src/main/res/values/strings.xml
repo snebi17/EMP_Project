@@ -5,4 +5,6 @@
 
     <string name="freqNumberText">0</string>
     <string name="freq_name">Frequency:</string>
+
+    <string name="buttonStart">Start</string>
 </resources>
