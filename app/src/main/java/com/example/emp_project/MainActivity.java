@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            processPitch(pitchInHz);
+                            standart_Tuning(pitchInHz);
                         }
                     });
                 }
@@ -76,42 +76,104 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public void processPitch(float pitchInHz) {
+    public void standart_Tuning(float pitchInHz) {
         pitchText.setText("" + pitchInHz);
+        // za sweet spot je green
 
-        if(pitchInHz >= 110 && pitchInHz < 123.47) {
-            //A
+        if(pitchInHz >= 72.4 && pitchInHz < 92.4) {
+            //e - 82,4 je sweet spot
+            noteText.setText("e");
+        }
+        else if(pitchInHz >= 100 && pitchInHz < 120) {
+            //A - 110 je sweet spot
             noteText.setText("A");
         }
-        else if(pitchInHz >= 123.47 && pitchInHz < 130.81) {
-            //B
-            noteText.setText("B");
-        }
-        else if(pitchInHz >= 130.81 && pitchInHz < 146.83) {
-            //C
-            noteText.setText("C");
-        }
-        else if(pitchInHz >= 146.83 && pitchInHz < 164.81) {
-            //D
+        else if(pitchInHz >= 137 && pitchInHz < 157) {
+            //D - 147 je sweet spot
             noteText.setText("D");
         }
-        else if(pitchInHz >= 164.81 && pitchInHz <= 174.61) {
-            //E
-            noteText.setText("E");
-        }
-        else if(pitchInHz >= 174.61 && pitchInHz < 185) {
-            //F
-            noteText.setText("F");
-        }
-        else if(pitchInHz >= 185 && pitchInHz < 196) {
-            //G
+        else if(pitchInHz >= 186 && pitchInHz < 206) {
+            //G - 196 je sweet spot
             noteText.setText("G");
         }
-        else if(pitchInHz > 196) {
-            noteText.setText("to high");
+        else if(pitchInHz >= 237 && pitchInHz <= 257) {
+            //B - 247 je sweet spot
+            noteText.setText("B");
+        }
+        else if(pitchInHz >= 320 && pitchInHz < 340) {
+            //E - 330 je sweet spot
+            noteText.setText("E");
         }
         else {
-            noteText.setText("to low");
+            noteText.setText("undefined");
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void dropD_Tuning(float pitchInHz) {
+        pitchText.setText("" + pitchInHz);
+        // za sweet spot je green
+
+        if(pitchInHz >= 63.4 && pitchInHz < 83.4) {
+            //e - 73,4 je sweet spot
+            noteText.setText("e");
+        }
+        else if(pitchInHz >= 100 && pitchInHz < 120) {
+            //A - 110 je sweet spot
+            noteText.setText("A");
+        }
+        else if(pitchInHz >= 137 && pitchInHz < 157) {
+            //D - 147 je sweet spot
+            noteText.setText("D");
+        }
+        else if(pitchInHz >= 186 && pitchInHz < 206) {
+            //G - 196 je sweet spot
+            noteText.setText("G");
+        }
+        else if(pitchInHz >= 237 && pitchInHz <= 257) {
+            //B - 247 je sweet spot
+            noteText.setText("B");
+        }
+        else if(pitchInHz >= 320 && pitchInHz < 340) {
+            //E - 330 je sweet spot
+            noteText.setText("E");
+        }
+        else {
+            noteText.setText("undefined");
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void lowE_Tuning(float pitchInHz) { // slash tuning
+        pitchText.setText("" + pitchInHz);
+        // za sweet spot je green
+
+        if(pitchInHz >= 70 && pitchInHz < 86) {
+            //e - 78 je sweet spot
+            noteText.setText("e");
+        }
+        else if(pitchInHz >= 97 && pitchInHz < 113) {
+            //A - 105 je sweet spot
+            noteText.setText("A");
+        }
+        else if(pitchInHz >= 129 && pitchInHz < 148) {
+            //D - 139 je sweet spot
+            noteText.setText("D");
+        }
+        else if(pitchInHz >= 175 && pitchInHz < 195) {
+            //G - 185 je sweet spot
+            noteText.setText("G");
+        }
+        else if(pitchInHz >= 223 && pitchInHz <= 243) {
+            //B - 233 je sweet spot
+            noteText.setText("B");
+        }
+        else if(pitchInHz >= 302 && pitchInHz < 322) {
+            //E - 312 je sweet spot
+            noteText.setText("E");
+        }
+        else {
+            noteText.setText("undefined");
         }
     }
 
