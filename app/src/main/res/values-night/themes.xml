@@ -1,6 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+<<<<<<< HEAD
     <style name="Theme.GuitarTuner" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+=======
+    <style name="Theme.EMP_project" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+>>>>>>> 3f0a6dd7902c25bbbd0377486865adb69b6e3fd7
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
