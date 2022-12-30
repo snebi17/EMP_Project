@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<<<<<<< HEAD
+    <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+=======
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+>>>>>>> 3f0a6dd7902c25bbbd0377486865adb69b6e3fd7
 
     <application
         android:allowBackup="true"
@@ -12,6 +16,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
+        android:theme="@style/Theme.GuitarTuner"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+=======
         android:theme="@style/Theme.EMP_project"
         tools:targetApi="33">
         <activity
@@ -19,6 +30,7 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.EMP_project.NoActionBar">
+>>>>>>> 3f0a6dd7902c25bbbd0377486865adb69b6e3fd7
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +41,12 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+<<<<<<< HEAD
+        <activity android:name=".TuningActivity">
+
+        </activity>
+=======
+>>>>>>> 3f0a6dd7902c25bbbd0377486865adb69b6e3fd7
     </application>
 
 </manifest>

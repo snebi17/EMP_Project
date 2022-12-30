@@ -2,4 +2,9 @@
 plugins {
     id 'com.android.application' version '7.3.1' apply false
     id 'com.android.library' version '7.3.1' apply false
+<<<<<<< HEAD
 }
+
+=======
+}
+>>>>>>> 3f0a6dd7902c25bbbd0377486865adb69b6e3fd7
