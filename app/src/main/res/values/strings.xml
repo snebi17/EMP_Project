@@ -1,4 +1,8 @@
 <resources>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 302797b47efa66354f2081116fde429774e58f12
     <string name="app_name">GuitarTuner</string>
     <string name="tuning_standard">Standard</string>
     <string name="tuning_dropE">Low E</string>
@@ -16,4 +20,17 @@
         <item name="stringE">E</item>
     </string-array>
     <string name="fab">Go home</string>
+<<<<<<< HEAD
+=======
+=======
+    <string name="app_name">My Application</string>
+
+    <string name="first_fragment_label">Home</string>
+
+    <string name="freqNumberText">0</string>
+    <string name="freq_name">Frequency:</string>
+
+    <string name="buttonStart">Start</string>
+>>>>>>> 3f0a6dd7902c25bbbd0377486865adb69b6e3fd7
+>>>>>>> 302797b47efa66354f2081116fde429774e58f12
 </resources>

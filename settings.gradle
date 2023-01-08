@@ -12,5 +12,13 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+<<<<<<< HEAD
 rootProject.name = "GuitarTuner"
+=======
+<<<<<<< HEAD
+rootProject.name = "GuitarTuner"
+=======
+rootProject.name = "EMP_project"
+>>>>>>> 3f0a6dd7902c25bbbd0377486865adb69b6e3fd7
+>>>>>>> 302797b47efa66354f2081116fde429774e58f12
 include ':app'
