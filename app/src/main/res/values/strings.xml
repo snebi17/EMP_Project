@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GuitarTuner</string>
+    <string name="tuning_standard">Standard</string>
+    <string name="tuning_dropE">Low E</string>
+    <string name="tuning_dropD">Drop D</string>
+    <string name="app_usage">Click on one of the buttons to select your tuning</string>
+    <string name="tuning_selected"></string>
+    <string name="tune_lower">Too high</string>
+    <string name="tune_higher">Too low</string>
+    <string-array name="strings">
+        <item name="stringE">E</item>
+        <item name="stringA">A</item>
+        <item name="stringE">D</item>
+        <item name="stringG">G</item>
+        <item name="stringB">B</item>
+        <item name="stringE">E</item>
+    </string-array>
+    <string name="fab">Go home</string>
+</resources>
